@@ -228,3 +228,31 @@ The API will return four error types when requests fail:
   "total_categories": 6
 }
 ```
+#### GET /categories/<int:category_id>/questions
+- General:
+    - Returns a list of questions by category objects, success value, and total number of questions
+- Sample: `curl http://127.0.0.1:5000/categories/3/questions`
+```
+{
+  "category_id": 6, 
+  "questions": [
+    {
+      "answer": "Brazil", 
+      "category": 6, 
+      "difficulty": 3, 
+      "id": 10, 
+      "question": "Which is the only team to play in every soccer World Cup tournament?"
+    }, 
+    {
+      "answer": "Uruguay", 
+      "category": 6, 
+      "difficulty": 4, 
+      "id": 11, 
+      "question": "Which country won the first ever soccer World Cup in 1930?"
+    }, 
+    {
+  ], 
+  "success": true, 
+  "total_questions": 2
+}
+```

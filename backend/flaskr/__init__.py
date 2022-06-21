@@ -243,7 +243,7 @@ def create_app(test_config=None):
     def questions_by_category(category_id):
         """
         GET_QUESTIONS_BY_CATEGORY: /categories/category_id/questions endpoint
-        This endpoint sets questions based on the category selected by the user. Sends a resource not found error (404) if the request could not be processed
+        This endpoint gets all categories. Sends a resource not found error (404) if the request could not be processed
         """
         category = Category.query.filter_by(id=id).one_or_none()
 
